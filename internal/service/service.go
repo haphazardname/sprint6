@@ -38,7 +38,7 @@ func (s *Service) ConvertString(input string) (string, error) {
 		res = s.converter.ToText(input)
 	} else {
 		// Иначе считаем, что это текст
-		res = s.converter.ToMorse(input)
+		res = s.converter.ToMorse(strings.ToUpper(input))
 		//res = input
 	}
 	//os.WriteFile(time.Now().String()+".txt", []byte(res), 0644)
